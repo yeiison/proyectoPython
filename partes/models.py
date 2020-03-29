@@ -1,4 +1,5 @@
 from django.db import models
+from compras.models import Compra
 
 # Create your models here.
 class Parte (models.Model):
@@ -7,3 +8,6 @@ class Parte (models.Model):
     marca = models.CharField(max_length=20)
     caracteristicas = models.CharField(max_length=30)
     cantidad = models.IntegerField()
+
+    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE,
+                                null=True, blank=False)

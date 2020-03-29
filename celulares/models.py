@@ -1,5 +1,9 @@
 from django.db import models
 
+from compras.models import Compra
+from empresas.models import Empresa
+from users.models import User
+
 # Create your models here.
 class Celular (models.Model):
     fecha = models.DateField()
@@ -9,3 +13,10 @@ class Celular (models.Model):
     imei = models.IntegerField()
     email = models.EmailField()
     numero = models.IntegerField()
+
+    #Relation one a many
+    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE ,null=False, blank=False)
+    empresa = models.ForeignKey(to=Empresa, on_delete=models.CASCADE ,null=False, blank=False)
+
+    #Relation one to one
+    users = models.OneToOneField(to=User, on_delete=models.CASCADE, null=False, blank=False)
