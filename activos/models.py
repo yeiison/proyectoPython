@@ -31,6 +31,5 @@ class Activo (models.Model):
     #Relation one to one
     user = models.OneToOneField(to=User, on_delete=models.CASCADE, null=False, blank=False)
 
-    parte = models.OneToOneField(to=Parte, on_delete=models.CASCADE, null=True) #si se piden varias cantidad de partes como descontar cada ves que se entreguen.
-
-
+    parte = models.OneToOneField(to=Parte, on_delete=models.CASCADE, null=True) 
+    

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'celulares',
     'empresas',
     'partes',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
