@@ -5,12 +5,15 @@ from empresas.models import Empresa
 from users.models import User
 from partes.models import Parte
 # Create your models here.
-class Caracteristica (models.Model): # No me visualiza esta clase en el servidor
+class Caracteristica (models.Model): 
     procesador = models.CharField(max_length=20)
     generacion = models.IntegerField()
     ram = models.IntegerField()
     discoDuro = models.IntegerField()
     estadoDD = models.CharField(max_length=20)
+
+    def __str__ (self):     #Muestro los dombres de los objetos
+        return self.procesador.__str__()
 
 class Activo (models.Model):
     fecha = models.DateField()

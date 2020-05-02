@@ -6,5 +6,8 @@ class Compra(models.Model):
     ordenCompra = models.IntegerField(null=True)
     estado = models.CharField(max_length=20)
 
+    def __str__ (self):     #Muestro los dombres de los objetos
+        return self.ordenCompra.__str__()
+
 
     

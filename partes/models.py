@@ -9,5 +9,7 @@ class Parte (models.Model):
     caracteristicas = models.CharField(max_length=30)
     cantidad = models.IntegerField()
 
-    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE,
-                                null=True, blank=False)
+    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE, null=True, blank=False)
+
+    def __str__ (self):     #Muestro los Nombres de los objetos
+        return self.caracteristicas.__str__()
