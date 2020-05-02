@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn deviceManage/wsgi.py 
+web: gunicorn deviceManage.wsgi
