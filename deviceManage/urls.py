@@ -23,6 +23,7 @@ from celulares.views import CelularesView
 from compras.views import ComprasView
 from partes.views import PartesView
 from users.views import UsersView
+from login.views import LoginsView
 
 
 
@@ -36,6 +37,7 @@ router.register(r'celulares', CelularesView)
 router.register(r'compras', ComprasView)
 router.register(r'partes', PartesView)
 router.register(r'users', UsersView)
+router.register(r'logins', LoginsView)
 
 
 
