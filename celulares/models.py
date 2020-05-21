@@ -15,8 +15,8 @@ class Celular (models.Model):
     numero = models.IntegerField()
 
     #Relation one a many
-    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE ,null=False, blank=False)
+    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE , null=True, blank=True)
     empresa = models.ForeignKey(to=Empresa, on_delete=models.CASCADE ,null=False, blank=False)
 
     #Relation one to one
-    users = models.OneToOneField(to=User, on_delete=models.CASCADE, null=False, blank=False)
+    users = models.OneToOneField(to=User, on_delete=models.CASCADE, blank=True)
