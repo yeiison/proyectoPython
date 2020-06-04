@@ -7,7 +7,7 @@ class CaracteristicaSerializers (serializers.HyperlinkedModelSerializer):
         fields = ['id', 'procesador', 'generacion', 'ram', 'discoDuro', 'estadoDD']
         pass
 
-class AtivoSerializers (serializers.HyperlinkedModelSerializer):
+class AtivoSerializers (serializers.ModelSerializer):
     class Meta:
         model = Activo
         fields = ['id', 'fecha', 'tipo', 'marca', 'referencia', 'estado', 'serial','valor', 'placa', 'codigo', 'caracteristicas', 'compra', 'empresa', 'user', 'parte' ]

@@ -23,7 +23,7 @@ from celulares.views import CelularesView
 from compras.views import ComprasView
 from partes.views import PartesView
 from users.views import UsersView
-from login.views import LoginsView
+from login.views import LoginsView  
 
 
 
@@ -37,7 +37,7 @@ router.register(r'celulares', CelularesView)
 router.register(r'compras', ComprasView)
 router.register(r'partes', PartesView)
 router.register(r'users', UsersView)
-router.register(r'logins', LoginsView)
+#router.register(r'logins', LoginsView) 
 
 
 
@@ -47,5 +47,6 @@ router.register(r'logins', LoginsView)
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-login/', LoginsView.as_view())
 ]
