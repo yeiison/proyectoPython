@@ -5,5 +5,5 @@ from .models import Empresa
 class EmpresaSerializers (serializers.HyperlinkedModelSerializer): #https://www.django-rest-framework.org/#installation
     class Meta:
         model = Empresa
-        fields =  ['id', 'nomCiudad', 'nomSucursal']
+        fields =  ['id', 'nomEmpresa', 'nomCiudad', 'nomSubdivision']
         pass

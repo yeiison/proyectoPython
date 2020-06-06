@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'celulares',
     'empresas',
     'partes',
+    'login',
     'rest_framework',
     'corsheaders',
 

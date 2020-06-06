@@ -4,6 +4,6 @@ from .models import Compra
 class CompraSerializers (serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Compra
-        fields = ['id', 'tipo', 'ordenCompra', 'estado']
+        fields = ['id', 'fecha', 'tipo', 'ordenCompra', 'estado']
         pass
 
