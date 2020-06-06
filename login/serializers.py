@@ -5,6 +5,11 @@ from .models import Login
 class LoginSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Login
-        fields = ['id', 'names', 'lastNames', 'userName']
+        fields = ['id', 'names', 'lastNames', 'userName', 'password']
         pass
-     
+
+class AutenticarSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Login
+        fields = ['userName' , 'password']
+        pass
