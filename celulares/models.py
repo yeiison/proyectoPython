@@ -13,6 +13,7 @@ class Celular (models.Model):
     imei = models.IntegerField()
     email = models.EmailField()
     numero = models.IntegerField()
+    
 
     #Relation one a many
     compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE , null=True, blank=True)
