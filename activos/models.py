@@ -17,7 +17,6 @@ class Caracteristica (models.Model):
 
 class Activo (models.Model):
     fecha = models.DateField()
-    cantidad = models.IntegerField()
     tipo = models.CharField(max_length=20)
     marca = models.CharField(max_length=20)
     referencia = models.CharField(max_length=20)
@@ -27,12 +26,12 @@ class Activo (models.Model):
     placa = models.CharField(max_length=20)
     codigo = models.IntegerField()
 
-    #Relation onr to many
-    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE, null=True, blank=False) #preguntar si no quiero que se eliminin los registros en cascada si no solo los registros de esa clase
+    #Relation one to many
+    compra = models.ForeignKey(to=Compra, on_delete=models.CASCADE, null=True, blank=True) #preguntar si no quiero que se eliminin los registros en cascada si no solo los registros de esa clase
     empresa = models.ForeignKey(to=Empresa, on_delete=models.CASCADE, null=False, blank=False)
-    caracteristicas = models.ForeignKey(to=Caracteristica, on_delete=models.CASCADE, null=True) 
+    caracteristicas = models.ForeignKey(to=Caracteristica, on_delete=models.CASCADE, null=False, blank=False) 
     #Relation one to one
-    user = models.OneToOneField(to=User, on_delete=models.CASCADE, null=False, blank=False)
+    user = models.OneToOneField(to=User, on_delete=models.CASCADE, null=True, blank=True)
 
     parte = models.OneToOneField(to=Parte, on_delete=models.CASCADE, null=True) 
     
